@@ -4,7 +4,14 @@
 function myReduce(arr, callback) {
 
 //  CODE INSIDE HERE   //
-
+var current = null;
+// For loop to iterate through function
+for (var i = 0; i < arr.length; i++) {
+// Callback function for each index	
+	current = callback(current, arr[i]);
+	return current; // Which scope should be used?
+}
+	
 }
 
 /*
